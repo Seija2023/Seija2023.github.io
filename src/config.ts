@@ -86,7 +86,7 @@ export default {
     emoji: [],
     meta: ["nick", "mail", "link"],
     requiredMeta: ["nick"],
-    wordLimit: 0,
+    wordLimit: 1000,
     pageSize: 10,
     pageview: false,
   },
@@ -210,7 +210,7 @@ export default {
   triangle_badge: {
     enable: false,
     type: "github",
-    link: "https://github.com/D-Sketon/astro-theme-reimu",
+    link: "https://github.com/Seija2023/Seija2023.github.io",
   },
   // whether to display the notification when the article is outdated
   outdate: {

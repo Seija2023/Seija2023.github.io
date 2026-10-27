@@ -1,53 +1,33 @@
 ---
 import { WALINE } from "../../../utils/config";
+const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? "";
 ---
 
-<link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/@waline/client@2.15.8/dist/waline.min.css"
-/>
-<div id="comments" class="waline-comment" data-aos="fade-up"></div>
-<script data-astro-rerun is:inline define:vars={{ WALINE }} type="module">
-  import { init } from "https://cdn.jsdelivr.net/npm/@waline/client@2.15.8/dist/waline.mjs";
+<link rel="stylesheet" href="https://unpkg.com/@waline/client@v3/dist/waline.css" />
+<div id="comments" class="waline-comment"></div>
+<script data-astro-rerun is:inline define:vars={{ WALINE, turnstileKey }} type="module">
+  import { init } from "https://unpkg.com/@waline/client@v3/dist/waline.js";
   init({
     el: ".waline-comment",
     serverURL: WALINE.serverURL,
     lang: WALINE.lang,
-    locale: WALINE.locale,
+    locale: { ...WALINE.locale, placeholder: "欢迎留言。评论提交后需要管理员审核。" },
     emoji: WALINE.emoji,
     meta: WALINE.meta,
     requiredMeta: WALINE.requiredMeta,
     wordLimit: WALINE.wordLimit,
+    login: "disable",
+    imageUploader: false,
     comment: true,
     pageSize: WALINE.pageSize,
     dark: 'html[data-theme="dark"]',
     pageview: WALINE.pageview,
+    turnstileKey: turnstileKey || undefined,
   });
 </script>
-
-<style lang="stylus" is:global>
-  .wl-emoji-popup {
-    max-width: calc(100vw - 90px) !important;
-  }
-
-  .wl-count {
-    color: var(--color-default);
-  }
-
-  .wl-header input {
-    font-size: revert !important;
-  }
-
-  .wl-panel {
-    margin: 0.5em 0 !important;
-  }
-
-  .wl-action,
-  .wl-sort li {
-    cursor: var(--cursor-pointer) !important;
-  }
-
-  .wl-header label {
-    cursor: var(--cursor-default) !important;
-  }
+<style is:global>
+.waline-comment { --waline-theme-color: #315e89; --waline-active-color: #244e74; }
+[data-theme="dark"] .waline-comment { --waline-theme-color: #a9cbe9; --waline-active-color: #c1dcf4; }
+.wl-panel { margin: 0.5em 0; border-radius: 10px; }
+.wl-emoji-popup { max-width: calc(100vw - 90px) !important; }
 </style>
