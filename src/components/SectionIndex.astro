@@ -1,0 +1,32 @@
+---
+import { getCollection } from "astro:content";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "./Footer.astro";
+import HeaderTitle from "./partial/HeaderTitle.astro";
+import { urlFor } from "../utils/urlFor";
+import { formatDate } from "../utils/formatDate";
+type Props={title:string;description:string;category:string};
+const {title,description,category}=Astro.props;
+const posts=(await getCollection("blog")).filter(p=>p.data.categories?.includes(category)).sort((a,b)=>b.data.pubDate.getTime()-a.data.pubDate.getTime());
+---
+<BaseLayout title={title} description={description}>
+  <HeaderTitle title={title} url={urlFor("/")} slot="header"/>
+  <section id="main" aria-label={title}>
+    <div class="collection-intro"><h2>{title}</h2><p>{description}</p></div>
+    <div class="collection-list">
+      {posts.length ? posts.map(post=><a href={urlFor(`blog/${post.id}`)} class="collection-post"><time datetime={post.data.pubDate.toISOString()}>{formatDate(post.data.pubDate)}</time><h3>{post.data.title}</h3><p>{post.data.excerpt??post.data.description}</p><span>阅读全文 →</span></a>) : <div class="collection-empty">这里将陆续更新内容。</div>}
+    </div>
+  </section>
+  <Footer slot="footer"/>
+</BaseLayout>
+<style>
+.collection-intro,.collection-post,.collection-empty{background:var(--color-wrap);border:1px solid var(--color-border);border-radius:12px;padding:28px 30px;margin-bottom:16px;}
+.collection-intro h2{font-size:25px;font-weight:700;margin:0 0 8px;}
+.collection-intro p,.collection-post p{color:var(--grey-9);font-size:14px;line-height:1.8;margin:0;}
+.collection-post{display:block;text-decoration:none;transition:border-color .15s;}
+.collection-post:hover{border-color:var(--red-3);}
+.collection-post time{font-size:12px;color:var(--grey-9);}
+.collection-post h3{font-weight:700;font-size:20px;color:var(--color-default);margin:12px 0;}
+.collection-post span{font-size:13px;color:var(--color-link);}
+.collection-empty{color:var(--grey-9);}
+</style>

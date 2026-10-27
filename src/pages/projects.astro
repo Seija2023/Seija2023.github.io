@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+import HeaderTitle from "../components/partial/HeaderTitle.astro";
+import {urlFor} from "../utils/urlFor";
+---
+<BaseLayout title="项目作品" description="公开项目与作品">
+ <HeaderTitle title="项目作品" url={urlFor("/")} slot="header"/>
+ <section id="main" aria-label="项目作品">
+  <div class="projects-intro"><h2>项目作品</h2><p>这里集中展示已经公开的工程与软件项目，更多内容会陆续整理。</p></div>
+  <article class="project"><span class="project-type">WEB · OPEN SOURCE</span><h3>五子棋网页游戏</h3><p>一个独立的浏览器五子棋项目，可以在线体验，也可以在 GitHub 阅读代码。</p>
+   <div><a href="https://seija2023.github.io/gomoku-web/" target="_blank" rel="noopener noreferrer">在线体验 ↗</a><a href="https://github.com/Seija2023/gomoku-web" target="_blank" rel="noopener noreferrer">GitHub 源码 ↗</a></div>
+  </article>
+ </section><Footer slot="footer"/>
+</BaseLayout>
+<style>
+.projects-intro,.project{background:var(--color-wrap);border:1px solid var(--color-border);border-radius:12px;padding:30px;margin-bottom:17px;}
+.projects-intro h2{font-size:25px;font-weight:700;margin:0 0 8px;}
+.projects-intro p,.project p{font-size:14px;line-height:1.8;color:var(--grey-9);}
+.project-type{color:var(--color-link);font-size:12px;font-weight:700;letter-spacing:.1em;}
+.project h3{font-size:21px;font-weight:700;margin:12px 0;color:var(--color-default);}
+.project div{display:flex;flex-wrap:wrap;gap:20px;}
+.project a{color:var(--color-link);font-size:14px;text-decoration:none;font-weight:600;}
+</style>

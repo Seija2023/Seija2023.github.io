@@ -1,6 +1,5 @@
 ---
 import { VALINE, WALINE, GITALK, GISCUS, UTTERANCES, TWIKOO, DISQUS } from "../../utils/config";
-
 import ValineComment from "./comment/ValineComment.astro";
 import WalineComment from "./comment/WalineComment.astro";
 import GitalkComment from "./comment/GitalkComment.astro";
@@ -8,34 +7,27 @@ import GiscusComment from "./comment/GiscusComment.astro";
 import UtterancesComment from "./comment/UtterancesComment.astro";
 import TwikooComment from "./comment/TwikooComment.astro";
 import DisqusComment from "./comment/DisqusComment.astro";
-
-type Props = {
-  comment: boolean;
-};
-
-const { comment } = Astro.props;
+type Props={comment:boolean};
+const {comment}=Astro.props;
+const configured=(VALINE.enable && !!VALINE.appId && !!VALINE.appKey)
+||(WALINE.enable && !!WALINE.serverURL)
+||(TWIKOO.enable && !!TWIKOO.envId)
+||(DISQUS.enable && !!DISQUS.shortname)
+||(GISCUS.enable && !!GISCUS.repo)
+||(GITALK.enable && !!GITALK.clientID)
+||(UTTERANCES.enable && !!UTTERANCES.repo);
 ---
-
-{comment && VALINE.enable && <ValineComment />}
-{comment && WALINE.enable && <WalineComment />}
-{comment && GITALK.enable && <GitalkComment />}
-{comment && GISCUS.enable && <GiscusComment />}
-{comment && TWIKOO.enable && <TwikooComment />}
-{comment && DISQUS.enable && <DisqusComment />}
-{comment && UTTERANCES.enable && <UtterancesComment />}
-<style lang="stylus" is:global>
-  #comments {
-    background: var(--color-wrap);
-    padding: 20px 36px;
-    border-radius: 12px;
-    margin: 12px 0;
-
-    @media screen and (max-width: 767px) {
-      padding: 20px 16px;
-    }
-
-    a {
-      color: var(--color-link);
-    }
-  }
+{comment && VALINE.enable && !!VALINE.appId && <ValineComment/>}
+{comment && WALINE.enable && !!WALINE.serverURL && <WalineComment/>}
+{comment && GITALK.enable && !!GITALK.clientID && <GitalkComment/>}
+{comment && GISCUS.enable && !!GISCUS.repo && <GiscusComment/>}
+{comment && TWIKOO.enable && !!TWIKOO.envId && <TwikooComment/>}
+{comment && DISQUS.enable && !!DISQUS.shortname && <DisqusComment/>}
+{comment && UTTERANCES.enable && !!UTTERANCES.repo && <UtterancesComment/>}
+{comment && !configured && <section class="comment-unavailable" aria-label="评论区状态"><h3>评论区</h3><p>免注册留言功能正在配置中，开放后可在此交流。</p></section>}
+<style is:global>
+#comments,.comment-unavailable{background:var(--color-wrap);border:1px solid var(--color-border);border-radius:12px;margin:16px 0;padding:22px 28px;}
+.comment-unavailable h3{font-size:18px;font-weight:700;margin:0 0 10px;}
+.comment-unavailable p{margin:0;color:var(--grey-9);font-size:14px;line-height:1.8;}
+@media(max-width:767px){#comments,.comment-unavailable{padding:22px 18px;}}
 </style>
