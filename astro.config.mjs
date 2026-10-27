@@ -8,7 +8,6 @@ import icon from "astro-icon";
 import react from "@astrojs/react";
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
-import Font from 'vite-plugin-font';
 
 import mermaid from './src/plugins/mermaid.mjs';
 import rehypeLazyLoadImage from './src/plugins/lazyLoadImage.mjs';
@@ -37,12 +36,5 @@ export default defineConfig({
       ]
     },
     plugins: [pluginCollapsibleSections(), pluginLineNumbers()]
-  }), mdx(), sitemap(), icon(), react()],
-  vite: {
-    plugins: [
-     Font.vite({
-        scanFiles: ['src/**/*.{ts,tsx,js,jsx,md,mdx,astro,yml}']
-      }),
-    ]
-  }
+  }), mdx(), sitemap(), icon(), react()]
 });
