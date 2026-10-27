@@ -78,9 +78,9 @@ export default {
 
   // https://waline.js.org/
   waline: {
-    // Set serverURL to your Waline backend URL and enable after deploying the backend.
-    enable: false,
-    serverURL: "",
+    // Waline runs on Vercel; messages are stored in our Neon PostgreSQL database.
+    enable: true,
+    serverURL: "https://seija-waline.vercel.app",
     lang: "zh-CN",
     locale: {}, // https://waline.js.org/guide/features/i18n.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%AD%E8%A8%80
     emoji: [],

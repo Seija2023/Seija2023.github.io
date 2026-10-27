@@ -10,7 +10,7 @@ const open = WALINE.enable && Boolean(WALINE.serverURL);
 <BaseLayout title="留言板" description="交流与留言">
   <HeaderTitle title="留言板" url={urlFor("/")} slot="header"/>
   <section id="main" aria-label="留言板">
-    <div class="guestbook-intro"><h2>留言板</h2><p>欢迎交流技术问题、分享阅读感受或留下建议。计划提供无需注册的评论功能。</p></div>
+    <div class="guestbook-intro"><h2>留言板</h2><p>欢迎交流技术问题、分享阅读感受或留下建议。无需注册即可留言；评论经审核后公开显示。</p></div>
     {open ? <WalineComment /> : <div class="guestbook-offline"><h3>评论功能暂未开放</h3><p>网站已经上线，匿名评论服务仍在配置中。开放后可以直接填写昵称并留言，无需注册 GitHub 账号。</p></div>}
   </section>
   <Footer slot="footer"/>

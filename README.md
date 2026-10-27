@@ -14,7 +14,7 @@
 - 所有文章和页面都使用 Astro 构建，通过 GitHub Actions 发布到 GitHub Pages。
 
 ## 匿名评论
-详情参见 [Waline 部署与反垃圾配置指南](docs/WALINE_SETUP.md)。已预留 Waline 评论系统接口。要真正开放访客免注册留言，需先部署 Waline 服务端和数据库并设置反垃圾措施，然后将 `src/config.ts` 内 `waline.serverURL` 填为实际地址、将 `waline.enable` 设为 `true`。**未部署服务端时网站不会接受评论，也不会展示虚假的可用输入框。**
+匿名评论现已接入 [Waline 服务](https://seija-waline.vercel.app/)（Vercel）和 Neon PostgreSQL 数据库；站内的 [留言板](https://seija2023.github.io/guestbook) 以及文章底部均加载评论组件。访客可填写昵称免注册留言，评论经过审核后公开。后台地址为 `https://seija-waline.vercel.app/ui`。管理与反垃圾设置参见 [Waline 配置文档](docs/WALINE_SETUP.md)。
 
 ## 版权
 文章、图片等站点内容请使用自己拥有版权或已获得许可的素材。软件许可详见 `LICENSE`。

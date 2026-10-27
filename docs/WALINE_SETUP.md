@@ -1,6 +1,6 @@
 # 启用匿名评论：Waline 配置指南
 
-博客已内置 **Waline v3** 的前端组件，并在文章底部及 `/guestbook` 留言板接入；没有服务端时会显示明确的未开放状态。
+博客已部署 Waline v3：服务端 `https://seija-waline.vercel.app/`，管理后台 `https://seija-waline.vercel.app/ui`，数据库为 Neon PostgreSQL `neon-aero-xylophone`。文章底部与 `/guestbook` 已启用评论组件。
 
 ## 1. 部署服务端（需要网站管理员自己的第三方账户）
 
@@ -36,7 +36,7 @@ waline: {
 },
 ```
 
-如果启用 Turnstile，GitHub 仓库 **Settings → Secrets and variables → Actions → Variables** 可设置非机密的 `PUBLIC_TURNSTILE_SITE_KEY`，同时把该变量通过 Pages 工作流的构建环境传递给 Astro（当前工作流尚未自动传递此变量）；也可以在项目构建环境设置后再编译。真正的 `TURNSTILE_SECRET` 只能存放在 Waline 服务端。
+如果启用 Turnstile，GitHub 仓库 **Settings → Secrets and variables → Actions → Variables** 可设置非机密的 `PUBLIC_TURNSTILE_SITE_KEY`，同时把该变量通过 Pages 工作流的构建环境传递给 Astro（工作流现已支持传递此变量）；也可以在项目构建环境设置后再编译。真正的 `TURNSTILE_SECRET` 只能存放在 Waline 服务端。
 
 ## 4. 验收清单
 
