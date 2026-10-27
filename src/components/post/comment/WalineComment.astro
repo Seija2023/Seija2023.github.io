@@ -11,7 +11,7 @@ const turnstileKey = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY ?? "";
     el: ".waline-comment",
     serverURL: WALINE.serverURL,
     lang: WALINE.lang,
-    locale: { ...WALINE.locale, placeholder: "欢迎留言。评论提交后需要管理员审核。" },
+    locale: { ...WALINE.locale, placeholder: "欢迎留言，评论提交后直接公开，请友善交流。" },
     emoji: WALINE.emoji,
     meta: WALINE.meta,
     requiredMeta: WALINE.requiredMeta,

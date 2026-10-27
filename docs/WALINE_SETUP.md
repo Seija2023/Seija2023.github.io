@@ -6,7 +6,7 @@
 
 依据 [Waline 官方指南](https://waline.js.org/guide/get-started/) 将 Waline 服务端部署到 Vercel，并按照官方指引连接 Neon PostgreSQL 数据库。免费的个人方案存在资源与用途限制，请保持在免费额度内。
 
-部署后，访问 `https://你的-waline-地址/ui/register` 注册第一个管理员（该管理员拥有评论审核权限），并妥善保存密码。无需向任何第三方透露数据库密码或服务端密钥。
+部署后，访问 `https://你的-waline-地址/ui/register` 注册第一个管理员（该管理员可以管理和删除评论），并妥善保存密码。无需向任何第三方透露数据库密码或服务端密钥。
 
 ## 2. 配置反垃圾（在 Vercel 后台设置服务端环境变量）
 
@@ -15,7 +15,7 @@
 | `SITE_NAME` | `Seija's Blog` | 网站名称 |
 | `SITE_URL` | `https://seija2023.github.io` | 博客地址 |
 | `SECURE_DOMAINS` | `seija2023.github.io,你的-waline-服务域名` | 允许访问的站点域名 |
-| `COMMENT_AUDIT` | `true` | 先审核、后公开 |
+| `COMMENT_AUDIT` | `false` | 不启用人工审核，正常评论直接公开；当前在服务端 `index.cjs` 中明确设置为 false |
 | `IPQPS` | `60` | 同一 IP 评论发送间隔（秒） |
 | `LOGIN` | 不设置为 `force` | 允许访客免注册发表评论 |
 | `TURNSTILE_KEY` | 申请的 Turnstile 网站密钥 | 验证码前端公钥 |
@@ -42,9 +42,9 @@ waline: {
 
 - 文章评论区和留言板均加载正常，手机端和电脑端均可显示。
 - 普通访客无需账号，只填写昵称即可提交。
-- 邮箱可选；新评论进入后台审核，不立即公开。
-- 短时间大量提交被限流，Turnstile 验证由服务端完成。
-- 管理员可以在 `/ui` 通过审核、删除垃圾评论。
+- 邮箱可选；正常评论无需审核即可公开。
+- 保留 60 秒/IP 的发送限流及 Waline 基础反垃圾机制；仅在配置好 Turnstile 公钥、密钥后才有验证码校验。
+- 管理员可以在 `/ui` 删除垃圾评论；若滥用增多，可将 `COMMENT_AUDIT` 改回 `true` 并重新部署。
 - 定期备份 Neon 数据库；GitHub 文章备份不包括数据库评论。
 
 > 注：未完成外部服务端配置时，前端不会接受评论。这是网站安全设计，并非网页部署故障。

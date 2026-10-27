@@ -15,7 +15,7 @@
 
 ## 匿名评论
 
-本站的 [留言板](https://seija2023.github.io/guestbook/) 和文章底部使用 Waline，访客无需注册即可留言，评论审核后公开。服务端部署于 Vercel，评论数据保存在 Neon PostgreSQL。详细配置参见 [Waline 配置文档](docs/WALINE_SETUP.md)。
+本站的 [留言板](https://seija2023.github.io/guestbook/) 和文章底部使用 Waline，访客无需注册即可留言，正常评论提交后直接公开（垃圾评论仍可能被系统拦截）。服务端部署于 Vercel，评论数据保存在 Neon PostgreSQL。详细配置参见 [Waline 配置文档](docs/WALINE_SETUP.md)。
 
 ## 版权
 文章、图片等站点内容请使用自己拥有版权或已获得许可的素材。软件许可详见 `LICENSE`。
