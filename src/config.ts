@@ -1,10 +1,10 @@
 export default {
   site: {
-    title: "My Blog",
-    subtitle: "My Blog Subtitle",
-    description: "D-Sketon's blog",
-    keywords: "D-Sketon, blog, astro, theme",
-    author: "D-Sketon",
+    title: "Seija's Blog",
+    subtitle: "技术 · 生活 · 思考",
+    description: "个人技术分享、项目实践与生活记录",
+    keywords: "Seija2023, 技术博客, 科研, 生活记录, Astro",
+    author: "Seija",
     language: "zh-CN",
   },
 
@@ -36,7 +36,7 @@ export default {
   },
 
   footer: {
-    since: 2020, // 2020 - current year
+    since: 2026, // first year of the blog
     powered: true,
     count: true,
     busuanzi: true,
@@ -58,10 +58,7 @@ export default {
 
   social: {
     // email: mailto:xxx@gmail.com
-    github: "https://github.com/yourname",
-    google: "https://plus.google.com/yourname",
-    twitter: "https://twitter.com/yourname",
-    facebook: "https://www.facebook.com/yourname",
+    github: "https://github.com/Seija2023",
     // instagram: https://www.instagram.com/yourname
     // linkedin: https://www.linkedin.com/in/yourname
     // pinterest: https://www.pinterest.com/yourname
@@ -166,14 +163,7 @@ export default {
     count: true,
   },
 
-  friend: [
-    {
-      name: "D-Sketon",
-      url: "https://d-sketon.github.io/",
-      desc: "Main Site with hexo-theme-reimu",
-      avatar: "https://d-sketon.github.io/avatar/avatar.webp",
-    },
-  ],
+  friend: [],
 
   copyright: {
     enable: true,
@@ -189,14 +179,14 @@ export default {
   },
 
   preloader: {
-    enable: true,
-    text: "少女祈祷中...",
+    enable: false,
+    text: "Loading...",
     rotate: true, // whether to rotate the icon
   },
 
   // see https://github.com/D-Sketon/mouse-firework
   firework: {
-    enable: true,
+    enable: false,
     disable_on_mobile: false,
     options: {
       excludeElements: ["a", "button"],
