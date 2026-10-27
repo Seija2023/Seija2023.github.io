@@ -5,8 +5,13 @@
 **网站**：https://seija2023.github.io/  
 **项目**：https://github.com/Seija2023/Seija2023.github.io
 
-## 发布文章
-在 `src/content/blog/` 下新增 Markdown 文件，按现有文章设置 `title`、`description`、`pubDate` 和 `categories`，提交到 `main` 即自动发布。
+## 发布与管理文章
+
+本站已经配置 [Pages CMS](https://app.pagescms.org/) 可视化文章管理。首次使用请用 GitHub 登录并授权访问此仓库；详细说明见 [Pages CMS 使用指南](docs/CONTENT_EDITOR.md)。
+
+文章继续存储在 `src/content/blog/` 中。你可以在 Pages CMS 直接创建、编辑、上传图片、设置分类及标签；保存后提交到 `main`，GitHub Actions 自动更新博客。高级 Markdown / LaTeX / Mermaid 内容建议使用源码模式。
+
+也可以直接在 GitHub 编辑 Markdown 文件，不必使用 CMS。
 
 ## 栏目
 - 首页、技术分享、生活记录、项目作品、文章归档、留言板、关于。

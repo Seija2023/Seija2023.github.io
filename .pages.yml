@@ -1,0 +1,75 @@
+# Pages CMS editor for Seija's Blog (Astro + GitHub Pages).
+# All edits are committed to GitHub; no separate content database is needed.
+settings:
+  content:
+    merge: true
+
+media:
+  input: public/images/posts
+  output: /images/posts
+  rename: safe
+
+content:
+  - name: posts
+    label: 博客文章
+    type: collection
+    path: src/content/blog
+    format: yaml-frontmatter
+    filename:
+      template: "{year}-{month}-{day}-{primary}.md"
+      field: create
+    view:
+      fields: [title, pubDate, categories, tags]
+      primary: title
+      sort: [pubDate, title]
+      default:
+        sort: pubDate
+        order: desc
+    fields:
+      - name: title
+        label: 文章标题
+        type: string
+        required: true
+      - name: description
+        label: 文章简介（用于 SEO）
+        type: text
+        required: true
+      - name: pubDate
+        label: 发布日期
+        type: date
+        required: true
+        options:
+          format: yyyy-MM-dd
+      - name: categories
+        label: 文章分类
+        type: string
+        list: true
+        description: "技术分享、生活记录、站点公告等；技术分享/生活记录栏目按分类名称筛选文章。"
+      - name: tags
+        label: 标签
+        type: string
+        list: true
+        description: "可自定义多个标签，例如电力电子、研究笔记、旅行。"
+      - name: excerpt
+        label: 摘要
+        type: text
+        description: "显示在文章列表中的简短介绍，可选。"
+      - name: cover
+        label: 封面图片
+        type: image
+        description: "从图片库选择或上传，存放在 public/images/posts。"
+      - name: comment
+        label: 允许评论
+        type: boolean
+        default: true
+      - name: toc
+        label: 显示目录
+        type: boolean
+        default: true
+      - name: body
+        label: 文章正文
+        type: rich-text
+        required: true
+        options:
+          format: markdown
+          switcher: true
