@@ -27,12 +27,11 @@ export default function SearchBox({
   searchIndexUrl,
   searchList: initialSearchList = [],
   postUrlPrefix,
-  imageUrl,
+
 }: {
   searchIndexUrl: string;
   searchList?: SearchItem[];
   postUrlPrefix: string;
-  imageUrl: string;
 }) {
   const [searchList, setSearchList] = useState<SearchItem[]>(
     initialSearchList
@@ -129,7 +128,7 @@ export default function SearchBox({
                 type="text"
                 value={query}
                 onChange={handleOnSearch}
-                placeholder="Search"
+                placeholder="搜索文章标题或关键词"
                 className=""
               />
               <FontAwesomeIcon
@@ -170,7 +169,7 @@ export default function SearchBox({
               </ul>
             </div>
           </div>
-          <img className="reimu-bg" src={imageUrl} />
+ 
         </div>
       </div>
     </>

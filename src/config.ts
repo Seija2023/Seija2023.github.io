@@ -9,37 +9,37 @@ export default {
   },
 
   sidebar: {
-    avatar: "/images/avatar.webp",
+    avatar: "/images/avatar.svg",
     position: "right", // left or right
   },
 
   widgets: ["recent_posts", "category", "tag", "tagcloud"],
 
   menu: [
-    { name: "home", url: "/" },
-    { name: "archives", url: "/archives" },
-    { name: "about", url: "/about" },
+    { name: "首页", url: "/" },
+    { name: "技术分享", url: "/tech" },
+    { name: "生活记录", url: "/life" },
+    { name: "项目作品", url: "/projects" },
+    { name: "文章归档", url: "/archives" },
+    { name: "留言板", url: "/guestbook" },
+    { name: "关于", url: "/about" },
   ],
 
-  banner: "/images/banner.webp", // which means themes/reimu/source/images/banner.webp
+  banner: "/images/hero.svg", // which means themes/reimu/source/images/banner.webp
   // You can also write it in the form of the following url
   // banner: "https://example.com"
 
   // If you want to use the srcset attribute, please enable it
   banner_srcset: {
-    enable: true,
-    srcset: [
-      { src: "/images/banner-600w.webp", media: "(max-width: 479px)" },
-      { src: "/images/banner-800w.webp", media: "(max-width: 799px)" },
-      { src: "/images/banner.webp", media: "(min-width: 800px)" },
-    ],
+    enable: false,
+    srcset: [],
   },
 
   footer: {
     since: 2026, // first year of the blog
-    powered: true,
-    count: true,
-    busuanzi: true,
+    powered: false,
+    count: false,
+    busuanzi: false,
     icp: {
       icpnumber: "",
       beian: "",
@@ -57,27 +57,7 @@ export default {
   },
 
   social: {
-    // email: mailto:xxx@gmail.com
     github: "https://github.com/Seija2023",
-    // instagram: https://www.instagram.com/yourname
-    // linkedin: https://www.linkedin.com/in/yourname
-    // pinterest: https://www.pinterest.com/yourname
-    // youtube: https://www.youtube.com/channel/yourname
-    // vimeo: https://vimeo.com/yourname
-    // flickr: https://www.flickr.com/photos/yourname
-    // dribbble: https://dribbble.com/yourname
-    // behance: https://www.behance.net/yourname
-    // bilibili: https://space.bilibili.com/yourname
-    // weibo: https://weibo.com/yourname
-    // zhihu: https://www.zhihu.com/people/yourname
-    // reddit: https://www.reddit.com/user/yourname
-    // tumblr: https://yourname.tumblr.com
-    // medium: https://medium.com/@yourname
-    // deviantart: https://yourname.deviantart.com
-    // keybase: https://keybase.io/yourname
-    // telegram: https://t.me/yourname
-    // discord: https://discordapp.com/users/yourname
-    // steam: https://steamcommunity.com/id/yourname
   },
 
   // https://valine.js.org
@@ -98,23 +78,17 @@ export default {
 
   // https://waline.js.org/
   waline: {
+    // Set serverURL to your Waline backend URL and enable after deploying the backend.
     enable: false,
     serverURL: "",
     lang: "zh-CN",
     locale: {}, // https://waline.js.org/guide/features/i18n.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%AD%E8%A8%80
-    emoji: [
-      "https://unpkg.com/@waline/emojis@1.2.0/weibo",
-      "https://unpkg.com/@waline/emojis@1.2.0/alus",
-      "https://unpkg.com/@waline/emojis@1.2.0/bilibili",
-      "https://unpkg.com/@waline/emojis@1.2.0/qq",
-      "https://unpkg.com/@waline/emojis@1.2.0/tieba",
-      "https://unpkg.com/@waline/emojis@1.2.0/tw-emoji",
-    ],
+    emoji: [],
     meta: ["nick", "mail", "link"],
-    requiredMeta: ["nick", "mail"],
+    requiredMeta: ["nick"],
     wordLimit: 0,
     pageSize: 10,
-    pageview: true,
+    pageview: false,
   },
 
   // https://github.com/gitalk/gitalk/blob/master/readme-cn.md
@@ -166,7 +140,7 @@ export default {
   friend: [],
 
   copyright: {
-    enable: true,
+    enable: false,
     content: {
       author: true,
       link: true,
@@ -244,15 +218,7 @@ export default {
     daysAgo: 180, // The number of days after which the article is considered outdated
   },
 
-  share: [
-    "weibo",
-    "twitter",
-    "facebook",
-    "linkedin",
-    "reddit",
-    "qq",
-    "weixin",
-  ],
+  share: ["weixin", "twitter"],
 
   sponsor: {
     enable: false,
