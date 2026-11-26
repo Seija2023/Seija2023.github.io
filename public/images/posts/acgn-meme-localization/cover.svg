@@ -1,1 +1,62 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 650" role="img" aria-labelledby="t d"><title id="t">从日本ACGN原作到中文互联网模因</title><desc id="d">两条案例路径和共享传播机制，定性分析图，不表示规模。</desc><rect width="1200" height="650" fill="#101c2d"/><g font-family="system-ui, 'Noto Sans CJK SC', sans-serif" fill="#eef4ff"><text x="64" y="75" font-size="35" font-weight="700">从原作到模因：两条本土再生产路径</text><text x="66" y="115" font-size="19" fill="#a9bbd1">赛马娘 × BanG Dream! ｜ 2021—2026 ｜ 定性机制示意</text><g font-size="23" font-weight="600"><rect x="64" y="170" width="300" height="115" rx="15" fill="#173d43" stroke="#58cbb5"/><text x="88" y="212">赛马娘</text><text x="88" y="250" font-size="18">蜂蜜之歌 / 曼波语音</text><rect x="64" y="342" width="300" height="115" rx="15" fill="#3d2e48" stroke="#cf9ad8"/><text x="88" y="385">BanG Dream!</text><text x="88" y="423" font-size="18">春日影 / 高松灯 / 群像</text><rect x="440" y="170" width="300" height="115" rx="15" fill="#173d43" stroke="#58cbb5"/><text x="464" y="212">声音与语义变异</text><text x="464" y="250" font-size="18">音MAD → 萌宠 → 通用音效</text><rect x="440" y="342" width="300" height="115" rx="15" fill="#3d2e48" stroke="#cf9ad8"/><text x="464" y="385">人格与叙事重构</text><text x="464" y="423" font-size="18">抽象语音 / 社会及政治隐喻</text><rect x="816" y="210" width="320" height="210" rx="18" fill="#26384d" stroke="#9cb6d5"/><text x="840" y="253">跨圈层传播</text><text x="840" y="294" font-size="18">模因使用者 ≠ 原作粉丝</text><text x="840" y="329" font-size="18">网络声量 ≠ 商业转化</text><text x="840" y="364" font-size="18">地域性 ≠ 全球普遍性</text></g><g fill="none" stroke="#a9bbd1" stroke-width="3"><path d="M364 227 H426 l-10 -8 m10 8 l-10 8"/><path d="M364 399 H426 l-10 -8 m10 8 l-10 8"/><path d="M740 227 H778 L806 273 l-12 -3 m12 3 l-4 -12"/><path d="M740 399 H778 L806 361 l-12 3 m12 -3 l-4 12"/></g><rect x="64" y="510" width="1072" height="75" rx="12" fill="#1b2b40"/><text x="88" y="542" font-size="20" font-weight="600">共享条件：参与式创作、跨平台搬运、短视频推荐、语音合成与本地语境</text><text x="88" y="568" font-size="15" fill="#a9bbd1">原作、二创与商业反馈之间并非必然因果关系；图示由本文绘制。</text><text x="66" y="625" font-size="15" fill="#a9bbd1">ACGN / MEME / CULTURAL REPRODUCTION</text></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 810" role="img" aria-labelledby="title desc">
+<title id="title">模因在中国生长</title><desc id="desc">文化杂志风格专题封面：猫、企鹅、麦克风与音轨组成拼贴，象征赛马娘与BanG Dream的中文互联网文化再生产。</desc>
+<defs>
+<pattern id="dots" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="3" cy="3" r="1.4" fill="#17242a" opacity=".18"/></pattern>
+<pattern id="lines" width="7" height="7" patternUnits="userSpaceOnUse"><path d="M0 1H7" stroke="#f4ebd8" opacity=".12"/></pattern>
+<clipPath id="frame"><rect width="1440" height="810"/></clipPath>
+</defs>
+<g clip-path="url(#frame)">
+<rect width="1440" height="810" fill="#f4ebd8"/>
+<path d="M870 0H1440V810H667Z" fill="#172b34"/>
+<circle cx="1138" cy="367" r="294" fill="#f07863"/>
+<circle cx="1138" cy="367" r="292" fill="url(#dots)"/>
+<path d="M844 580L1450 510V734L785 805Z" fill="#72bfb3"/>
+<path d="M861 0H1440V810H667Z" fill="url(#lines)" opacity=".45"/>
+<g font-family="system-ui, 'Noto Sans CJK SC','Microsoft YaHei','PingFang SC',sans-serif">
+<text x="76" y="84" font-size="19" font-weight="700" letter-spacing="4" fill="#172b34">CULTURE / INTERNET / ACGN</text>
+<path d="M76 106H726" stroke="#172b34" stroke-width="2"/>
+<text x="73" y="219" font-size="84" font-weight="900" fill="#172b34" letter-spacing="-4">模因在中国</text>
+<text x="73" y="326" font-size="108" font-weight="900" fill="#172b34" letter-spacing="-4">生长。</text>
+<path d="M82 360H618" stroke="#ed6e57" stroke-width="9"/>
+<text x="79" y="416" font-size="29" font-weight="600" fill="#172b34">日本 ACGN 文化的本土再生产</text>
+<text x="80" y="460" font-size="22" fill="#41585a">赛马娘 × BanG Dream! / MyGO!!!!! · Ave Mujica</text>
+<text x="80" y="527" font-size="19" fill="#41585a">哈基米 · 曼波 · 咕咕嘎嘎 · 贴吧 · 二创</text>
+<text x="76" y="700" font-size="82" font-weight="900" fill="#ed6e57" letter-spacing="-3">MEME</text>
+<text x="80" y="746" font-size="17" font-weight="700" fill="#172b34" letter-spacing="3">2021—2026    /    SPECIAL REPORT</text>
+</g>
+<!-- oversized offset halftone vinyl record -->
+<g transform="translate(1191 260)">
+<circle r="166" fill="#172b34" stroke="#f4ebd8" stroke-width="8"/>
+<circle r="140" fill="none" stroke="#47636a" stroke-width="2"/><circle r="119" fill="none" stroke="#47636a" stroke-width="2"/><circle r="97" fill="none" stroke="#47636a" stroke-width="2"/>
+<circle r="62" fill="#f7d47d"/><circle r="12" fill="#172b34"/>
+<path d="M-100 -100L-51 -51 M106 106L58 58" stroke="#f4ebd8" stroke-width="4" stroke-linecap="round" opacity=".65"/>
+</g>
+<!-- cat sticker: original illustration -->
+<g transform="translate(940 335) rotate(-12)">
+<path d="M-119 -24L-132 -152Q-134 -163 -123 -156L-37 -104Q0 -118 38 -104L119 -153Q133 -160 131 -143L121 -24Q151 3 151 56Q151 139 0 139Q-151 139 -151 56Q-151 4 -119 -24Z" fill="#172b34" opacity=".28" transform="translate(13 15)"/>
+<path d="M-119 -24L-132 -152Q-134 -163 -123 -156L-37 -104Q0 -118 38 -104L119 -153Q133 -160 131 -143L121 -24Q151 3 151 56Q151 139 0 139Q-151 139 -151 56Q-151 4 -119 -24Z" fill="#f7d47d" stroke="#f4ebd8" stroke-width="12" stroke-linejoin="round"/>
+<path d="M-115 -123L-59 -92L-109 -73Z M115 -123L60 -92L109 -73Z" fill="#e88070"/>
+<ellipse cx="-52" cy="21" rx="12" ry="20" fill="#172b34"/><ellipse cx="52" cy="21" rx="12" ry="20" fill="#172b34"/>
+<path d="M-11 52Q0 43 11 52L0 62Z" fill="#172b34"/><path d="M0 62V68Q-11 83 -24 72M0 68Q11 83 24 72" stroke="#172b34" stroke-width="4" fill="none" stroke-linecap="round"/>
+<path d="M-70 60L-112 48M-69 75L-111 78M70 60L112 48M69 75L111 78" stroke="#ad6b54" stroke-width="4" stroke-linecap="round"/>
+</g>
+<!-- penguin sticker: original illustration -->
+<g transform="translate(1220 526) rotate(10)">
+<path d="M-94 67Q-131 17 -102 -34Q-88 -143 0 -143Q88 -143 102 -34Q131 17 94 67L87 121Q0 165 -87 121Z" fill="#172b34" opacity=".28" transform="translate(12 13)"/>
+<path d="M-94 67Q-131 17 -102 -34Q-88 -143 0 -143Q88 -143 102 -34Q131 17 94 67L87 121Q0 165 -87 121Z" fill="#263e4c" stroke="#f4ebd8" stroke-width="12"/>
+<path d="M0 -67Q-64 -119 -76 -24Q-98 42 -62 100Q0 126 62 100Q98 42 76 -24Q64 -119 0 -67Z" fill="#f4ebd8"/>
+<ellipse cx="-34" cy="-30" rx="7" ry="12" fill="#172b34"/><ellipse cx="34" cy="-30" rx="7" ry="12" fill="#172b34"/>
+<path d="M-22 -5Q0 -22 22 -5L0 14Z" fill="#e7a64d"/>
+<ellipse cx="-48" cy="125" rx="34" ry="13" fill="#e7a64d"/><ellipse cx="48" cy="125" rx="34" ry="13" fill="#e7a64d"/>
+</g>
+<!-- microphone, cable, and sound symbols -->
+<g transform="translate(1004 594) rotate(-36)">
+<rect x="-29" y="-113" width="58" height="91" rx="28" fill="#f4ebd8" stroke="#172b34" stroke-width="5"/>
+<path d="M-22 -89H22 M-24 -76H24 M-24 -63H24 M-22 -50H22" stroke="#172b34" stroke-width="3"/>
+<rect x="-17" y="-22" width="34" height="99" rx="13" fill="#172b34" stroke="#f4ebd8" stroke-width="4"/>
+<path d="M0 77Q20 107 56 115Q99 130 91 170" stroke="#172b34" stroke-width="7" fill="none" stroke-linecap="round"/>
+</g>
+<path d="M856 106V147M841 125H871M1334 94V148M1313 121H1355M790 499V542M774 520H806" stroke="#f7d47d" stroke-width="7" stroke-linecap="round"/>
+<path d="M818 677L831 659L844 697L859 643L874 695L889 665L903 680" stroke="#172b34" stroke-width="6" fill="none" stroke-linejoin="round" stroke-linecap="round"/>
+<g font-family="system-ui,sans-serif" fill="#f4ebd8" font-weight="700" font-size="15" letter-spacing="2"><text x="1045" y="55">SOUND / SYMBOL / SOCIETY</text><text x="1115" y="772" fill="#172b34">HACHIMI &amp; MYGO</text></g>
+</g></svg>
